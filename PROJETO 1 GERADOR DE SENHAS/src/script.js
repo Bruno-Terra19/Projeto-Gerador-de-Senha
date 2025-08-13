@@ -32,7 +32,7 @@ frm.addEventListener("submit", (e) => {
         let sorteio = ""
 
         for(let i = 0; i <= numCaracteres; i++){
-            
+            let
         }
 
 })
