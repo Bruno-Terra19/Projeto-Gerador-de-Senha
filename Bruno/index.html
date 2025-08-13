@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GadS</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <div id="container">
+        <div class="gerador-de-senha"><h1>Gerador Automático de Senha</h1></div>
+        <div class="senha-gerada">
+            <input type="text" name="senha" id="inSenha" readonly>
+        </div>
+        <form>
+        <div class="especificacoes">
+            <label for="Letras Maiusculas">
+            <input type="checkbox" id="Letras Maiusculas" name="Letras maiusculas"> Letras Maiúsculas <br>
+        </label>
+        <label for="Letras Minusculas">
+            <input type="checkbox" id="Letras Minusculas" name="Letras minusculas"> Letras Minúsculas <br>
+        </label>
+        <label for="Simbolos">
+        <input type="checkbox" id="Simbolos" name="Simbolos"> Símbolos <br>
+        </label>
+        <label for="Numeros">
+            <input type="checkbox" id="Numeros" name="Numeros"> Números <br>
+        </label>
+        <label for="numeroscaracteres"><b>Número de Carácteres:</b></label> <br>
+        <input type="range" min="8" max="20" name="numeroscaracteres"> <br>
+        </div>
+        </form>
+        <input type="button" value="Gerar Senha" id="btGerar">
+</body>
+</html>
