@@ -29,10 +29,13 @@ frm.addEventListener("submit", (e) => {
             return
         }
 
-        let sorteio = ""
+        let senha = ""
 
-        for(let i = 0; i <= numCaracteres; i++){
-            let
+        for(let i = 0; i < numCaracteres; i++){
+            let sorteio = Math.floor(Math.random() * resposta.length)
+            senha += resposta[sorteio]
         }
+
+        frm.inSenha.value = senha
 
 })
