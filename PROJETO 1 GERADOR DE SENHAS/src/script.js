@@ -1,41 +1,61 @@
 const frm = document.querySelector("form")
+const resp1 = document.querySelector("#InSenha")
+const slider = document.getElementById("numeroscaracteres");
+const output = document.getElementById("valorRange");
+
+output.textContent = slider.value;
+
+slider.addEventListener("input", function() {
+  output.textContent = this.value;
+})
+
 
 frm.addEventListener("submit", (e) => {
     e.preventDefault()
-    
-        let resposta = ""
 
-        const numCaracteres = parseInt(document.getElementById("numeroscaracteres").value)
-        let Maiusculas = document.querySelector('input[name="letrasmaiusculas"]')
-        let Minusculas = document.querySelector('input[name="letrasminusculas"]')
-        let Simbolos = document.querySelector('input[name="simbolos"]')
-        let Numeros = document.querySelector('input[name="numeros"]')
+let resposta = ""
 
-        if (Maiusculas.checked) {
-            resposta += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        }
-        if (Minusculas.checked) {
-            resposta += "abcdefghijklmnopqrstuvwxyz"
-        }
-        if (Simbolos.checked) {
-            resposta += "!@#$%^&*()_+{}[]:;<>,.?/"
-        }
-        if (Numeros.checked) {
-            resposta += "0123456789"
-        }
+    let numCaracteres = parseInt(document.getElementById("numeroscaracteres").value)
+     // pega string numerica e transforma em number
+ let letmaiusculas = document.querySelector('input[name="letrasmaiusculas"]')
+ let letminusculas =  document.querySelector('input[name="letrasminusculas"]')
+ let sim =  document.querySelector('input[name="simbolos"]')
+ let num =  document.querySelector('input[name="numeros"]')
 
-        if (resposta.length === 0) {
+
+
+ if(letmaiusculas.checked){
+ letmaiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+ resposta +=letmaiusculas
+
+ }
+ if(letminusculas.checked){
+    letminusculas = "abcdefghijklmnopqrstuvwxyz" 
+     resposta += letminusculas
+ }
+ if(sim.checked){
+     sim = "!@#$%^&*()_+{}[]:;<>,.?/"
+      resposta +=sim
+ }
+ if(num.checked){
+    num = "0123456789"
+     resposta += num
+ }
+ 
+ if (resposta.length === 0) {
             alert("Selecione pelo menos uma opção!")
             return
         }
 
+
         let senha = ""
-
         for(let i = 0; i < numCaracteres; i++){
-            let sorteio = Math.floor(Math.random() * resposta.length)
-            senha += resposta[sorteio]
+             
+        let sorteio = Math.floor(Math.random() * resposta.length)
+        senha += resposta[sorteio]
+
+    
+           
         }
-
-        frm.inSenha.value = senha
-
+        resp1.value = senha
 })
