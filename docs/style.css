@@ -1,4 +1,12 @@
 /* Classes de largura customizadas */
+
+  input[type="range"] {
+    accent-color: #f80505;
+  }
+    input[type="checkbox"] {
+    accent-color: #f80505;
+    width: 20px;
+  }  
 .w-96 {
   width: 384px;
 }
