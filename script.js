@@ -15,7 +15,7 @@ frm.addEventListener("submit", (e) => {
 
 let resposta = ""
 
-    let numCaracteres = parseInt(document.getElementById("numeroscaracteres").value)
+let numCaracteres = parseInt(document.getElementById("numeroscaracteres").value)
      // pega string numerica e transforma em number
  let letmaiusculas = document.querySelector('input[name="letrasmaiusculas"]')
  let letminusculas =  document.querySelector('input[name="letrasminusculas"]')
